@@ -713,13 +713,13 @@ class MainWindow(QWidget):
                         outbound_ave_aus_score, out_grade, out_description]
             ari_grade, ari_description, inbound_grade_set, outbound_grade_set = per.output_performance_grade()
         '''
-        self.app_data.setValue('ratio', '')
-        self.app_data.setValue('stop_num', '')
-        self.app_data.setValue('arterial_veh', '')
-        self.app_data.setValue('inbound_grade_set', '')
-        self.app_data.setValue('outbound_grade_set', '')
-        self.app_data.setValue('ari_grade', '')
-        self.app_data.setValue('ari_description', '')
+        self.app_data.setValue('ratio', """['None', 'None', 'None', 'None', 'None', 'None']""")
+        self.app_data.setValue('stop_num', """['None', 'None']""")
+        self.app_data.setValue('arterial_veh', """['None', 'None']""")
+        self.app_data.setValue('inbound_grade_set', """['None', 'None', 'None', 'None', 'None']""")
+        self.app_data.setValue('outbound_grade_set', """['None', 'None', 'None', 'None', 'None']""")
+        self.app_data.setValue('ari_grade', """['None']""")
+        self.app_data.setValue('ari_description', """['None']""")
 
     # 生成种子列表
     @staticmethod
