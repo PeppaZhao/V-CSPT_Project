@@ -14,7 +14,11 @@ from PyQt6.QtWidgets import QApplication, QWidget
 
 
 def data_change(data):
-    return [str(i) for i in ast.literal_eval(data)]
+    print(type(data))
+    if data != "None":
+        return [str(i) for i in ast.literal_eval(data)]
+    else:
+        return "None"
 
 
 class ResultWindow(QWidget):
