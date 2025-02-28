@@ -8,15 +8,12 @@ import copy
 import sys
 import os
 import ctypes
-
 from PyQt6.QtGui import QAction
-
-from order_set import order
+from setting import order
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QWidget, QApplication, QMessageBox, QMenu
 from PyQt6.QtCore import QSettings, QDateTime
-
-from order_set.order import CSPTLIB, exit_vissim, compress_folder_except_init, selectFolder, output_result, \
+from setting.order import CSPTLIB, exit_vissim, compress_folder_except_init, selectFolder, output_result, \
     ExternalDataAnalyses
 from setting import Setting, BaseData, NetData, SignalData, SimData, Result, UploadData
 
