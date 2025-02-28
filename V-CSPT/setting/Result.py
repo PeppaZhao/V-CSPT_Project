@@ -54,9 +54,14 @@ class ResultWindow(QWidget):
             self.arterial_veh = data_change(self.arterial_veh)
             self.inbound_grade_set = data_change(self.inbound_grade_set)
             self.outbound_grade_set = data_change(self.outbound_grade_set)
-            self.trajectory_diagram = f"{self.res_loc}trajectory_diagram.png"
-            self.purdue_inbound = f"{self.res_loc}S1 purdue_inbound.png"
-            self.purdue_outbound = f"{self.res_loc}S1 purdue_outbound.png"
+            if self.ratio == ['None', 'None', 'None', 'None', 'None', 'None']:
+                self.trajectory_diagram = f"{self.res_loc}init/trajectory_diagram_blank.png"
+                self.purdue_inbound = f"{self.res_loc}init/purdue_inbound_blank.png"
+                self.purdue_outbound = f"{self.res_loc}init/purdue_outbound_blank.png"
+            else:
+                self.trajectory_diagram = f"{self.res_loc}trajectory_diagram.png"
+                self.purdue_inbound = f"{self.res_loc}S1 purdue_inbound.png"
+                self.purdue_outbound = f"{self.res_loc}S1 purdue_outbound.png"
 
         else:
             # 读取数据
@@ -64,8 +69,8 @@ class ResultWindow(QWidget):
                 self.outbound_grade_set, self.ari_grade, self.ari_description = [['None' for _ in range(i)] for i in
                                                                                  [6, 2, 2, 5, 5, 1, 1]]
             self.trajectory_diagram = f"{self.res_loc}init/trajectory_diagram.png"
-            self.purdue_inbound = f"{self.res_loc}init/S1 purdue_inbound.png"
-            self.purdue_outbound = f"{self.res_loc}init/S1 purdue_outbound.png"
+            self.purdue_inbound = f"{self.res_loc}init/purdue_inbound_blank.png"
+            self.purdue_outbound = f"{self.res_loc}init/purdue_outbound_blank.png"
         self.setupUi(self)
         self.openImage()
 
