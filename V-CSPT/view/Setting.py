@@ -39,12 +39,6 @@ class SettingWindow(QDialog):
         self.buttonBoxSettingCtro.setOrientation(QtCore.Qt.Orientation.Horizontal)
         self.buttonBoxSettingCtro.setStandardButtons(
             QtWidgets.QDialogButtonBox.StandardButton.Apply | QtWidgets.QDialogButtonBox.StandardButton.Cancel)
-        # 获取 Apply 按钮并设置中文文本
-        self.buttonBoxSettingCtro.button(QtWidgets.QDialogButtonBox.StandardButton.Apply).setText("应用")
-        self.buttonBoxSettingCtro.button(QtWidgets.QDialogButtonBox.StandardButton.Apply).setDefault(True)
-        # 获取 Cancel 按钮并设置中文文本
-        self.buttonBoxSettingCtro.button(QtWidgets.QDialogButtonBox.StandardButton.Cancel).setText("取消")
-        self.buttonBoxSettingCtro.setObjectName("buttonBoxSingaldataCtro")
         self.buttonBoxSettingCtro.setObjectName("buttonBoxSettingCtro")
         self.labelSetting_veh = QtWidgets.QLabel(parent=Dialog)
         self.labelSetting_veh.setGeometry(QtCore.QRect(40, 40, 70, 20))
@@ -228,8 +222,8 @@ class SettingWindow(QDialog):
         self.lineEditSetting_commonMinput.setPlaceholderText(_translate("Setting", "1"))
         self.labelSetting_veh_2.setText(_translate("Setting", "停车阈值"))
         self.labelSetting_vehunint_2.setText(_translate("Setting", "km/h"))
-        self.lineEditSetting_stop_threshold.setText(_translate("Setting", "0"))
-        self.lineEditSetting_stop_threshold.setPlaceholderText(_translate("Setting", "0"))
+        self.lineEditSetting_stop_threshold.setText(_translate("Setting", "5"))
+        self.lineEditSetting_stop_threshold.setPlaceholderText(_translate("Setting", "5"))
 
     def reSetting(self, button):
         # 判断点击的是哪个btn
